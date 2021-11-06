@@ -1,6 +1,10 @@
 # Akashic-Records
-Repositório do Trabalho 2 de INF1407
-Integrantes : 
-  Kevin Abreu de Araujo
-  Paulo Vítor Libório
- Tema : Ainda não definido
+
+## Trabalho 2 de INF1407 - Programação para a Web
+Integrantes do Grupo:
+
+* Paulo Vitor Libório  
+* Kevin Abreu  
+
+## Tema
+Ainda não definido.
