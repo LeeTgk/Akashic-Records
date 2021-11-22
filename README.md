@@ -7,4 +7,4 @@ Integrantes do Grupo:
 * Kevin Abreu  
 
 ## Tema
-Ainda não definido.
+A ideia do Trabalho é criar um site que dê acesso a alguns modelos de geração de texto gpt2, e permita que usuários salvem suas respostas, gerações favoritas em um perfil que pode ser acessado/editado através de um sistema de Login.  
