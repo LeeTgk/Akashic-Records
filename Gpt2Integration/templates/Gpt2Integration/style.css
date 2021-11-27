@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: #fefefe;
+}
+
+a
+{
+    color: red;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1
+{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+header
+{
+    background-color: black;
+     color: #fefefe;
+}
+
+body
+{
+    background-color: black;
+    color: #fefefe;
+}
+
+/*home.html*/
+.container
+{
+    margin: 20px;
+    padding: 20px;
+}
+
+
+.branding
+{
+    font-size: 50px;
+    display: inline-block;
+    font-family:'Courier New', Courier, monospace
+}
+
+footer
+{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #893839;
+    display: block;
+    text-align: center;
+}
