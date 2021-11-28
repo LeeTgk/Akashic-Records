@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 class UserRegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'userprofile/register.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('homepage')
 
     def form_valid(self, form):
         user = form.save()
