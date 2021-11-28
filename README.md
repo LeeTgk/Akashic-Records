@@ -7,7 +7,7 @@ Integrantes do Grupo:
   <tr>
     <td align="center">
       <a href="#">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Paulo Vitor Libório "/><br>
+        <img src="https://avatars.githubusercontent.com/u/19355448?v=4" width="100px;" alt="Foto do Paulo Vitor Libório "/><br>
         <sub>
           <b>Paulo Vítor Libório</b>
         </sub>
