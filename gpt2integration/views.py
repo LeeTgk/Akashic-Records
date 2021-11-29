@@ -9,11 +9,11 @@ API_URL_SmallPortuguese = "https://api-inference.huggingface.co/models/pierregui
 headers = {"Authorization": f"Bearer {os.getenv('API_TOKEN')}"}
 
 class AjaxHandlerView(View):
-    def get(self,request): 
+    def get(self,request):
         text = request.GET.get('textbox_text')
-        print(text)            
+        queryRes = query(text)
         if request.is_ajax():
-            queryRes = query(text)       
+            print(queryRes[0])
             return JsonResponse(queryRes[0], status=200)
 
         return render(request, 'Gpt2Integration/home.html')

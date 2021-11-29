@@ -47,13 +47,13 @@
                 It is a proof-of-concept that it is possible to get a state-of-the-art language model in any language with low ressources.</p>
         </div>
         <div class = "block model-columm center" >
-            <form class="gpt2-query">
+            <div class="gpt2-query">
                 <label class="block ">
                     <textarea class=" center overflow-auto resize-y py-2 px-3 min-w-\[450px\] min-h-[100px] max-h-[500px] border query-box rounded-lg outline-none" id="textboxGpt2Small" placeholder="Your Sentence Here."></textarea>
                 </label>
                 <br>
-                <button class="btn-widget h-10 px-5 " type="submit">Compute</button>
-            </form>
+                <button class="btn-widget h-10 px-5 " type="submit" id = "ComputeButton">Compute</button>
+            </div>
         </div>
         <div class= "gpt2-response model-columm hide" id="ResultBox">
             <h1>Result</h1>

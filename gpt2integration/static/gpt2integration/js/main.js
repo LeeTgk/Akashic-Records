@@ -1,13 +1,16 @@
 $(document).ready(function()
 {
+
+
     var textBox = document.getElementById("textboxGpt2Small");
     var ResultTextBox = document.getElementById("ResultTextBox");
-    $(".btn-widget").click(function()
+    $('#ComputeButton').click(function()
     {
         $.ajax(
         {
             url: '',
-            type: 'get',
+            type: 'GET',
+            cache: false,
             data: 
             {
                 textbox_text: textBox.value
