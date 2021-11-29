@@ -13,7 +13,8 @@ $(document).ready(function()
             cache: false,
             data: 
             {
-                textbox_text: textBox.value
+                textbox_text: textBox.value,
+                model: "SmallPortuguese"
             },
             beforeSend: function() 
             {
