@@ -1,14 +1,15 @@
 from django.contrib import messages
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
 from django.http import HttpResponseRedirect
 
+from .forms import UserCreationForm, UserChangeForm
+
 class UserRegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'userprofile/register.html'
-    success_url = reverse_lazy('homepage')
+    success_url = reverse_lazy('login')
 
     def form_valid(self, form):
         user = form.save()
