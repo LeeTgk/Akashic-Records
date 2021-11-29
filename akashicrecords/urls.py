@@ -20,5 +20,5 @@ from gpt2integration import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home, name='homepage'),
-    path('profile/', include('userprofile.urls'))
+    path('accounts/', include('userprofile.urls'))
 ]
