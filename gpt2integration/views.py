@@ -5,7 +5,7 @@ import requests
 import json
 import os
 
-API_URLSDict = {
+API_URL = {
     "SmallPortuguese" : "https://api-inference.huggingface.co/models/pierreguillou/gpt2-small-portuguese",
     "TolkienMythopoeic" : "https://api-inference.huggingface.co/models/muirkat/tolkien-mythopoeic-gen"
 }
