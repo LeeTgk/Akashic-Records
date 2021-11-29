@@ -14,7 +14,7 @@ $(document).ready(function()
             data: 
             {
                 textbox_text: textBox.value,
-                model: "SmallPortuguese"
+                model: "SmallPortuguese",
             },
             beforeSend: function() 
             {

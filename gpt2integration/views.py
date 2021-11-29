@@ -30,7 +30,11 @@ def home(request):
     return render(request, 'Gpt2Integration/home.html')
 
 def query(payload,model):
-	response = requests.post(API_URL[model], headers=headers, json=payload)
-	return response.json()
+    if model:
+        print(model)
+        api = API_URL[model]
+        response = requests.post(api, headers=headers, json=payload)
+        return response.json()
+    return
 
 #output = query("Can you please let us know more details about your ")
