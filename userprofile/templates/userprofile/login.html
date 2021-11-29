@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Autenticar{% endblock %}
+
+{% block main %}
+<h2>Autenticar</h2>
+{% include 'messages.html' %}
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}" />
+    {% include 'form.html' %}
+    <button type="submit" class="btn btn-primary">Acessar</button>
+</form>
+
+<ul>
+    <li><a href="{% url 'register' %}">Cadastrar-se</a></li>
+    <li><a href="{% url 'password_reset' %}">Esqueci minha senha</a></li>
+</ul>
+{% endblock %}
