@@ -17,14 +17,13 @@ class AjaxHandlerView(View):
         model = request.GET.get('model')
         queryRes = query(text,model)
         if request.is_ajax():
-            print(queryRes[0])
-            return JsonResponse(queryRes[0], status=200)
-
+            if queryRes:
+                return JsonResponse(queryRes[0], status=200)
+            
         return render(request, 'Gpt2Integration/home.html')
     
     def post(self,request):
         return
-
 
 def home(request):
     return render(request, 'Gpt2Integration/home.html')
