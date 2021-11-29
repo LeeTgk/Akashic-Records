@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,40 +20,64 @@
             Akashic-Records<br> 
         </div>
 
+        <div class=" c-sub-header-nav with-border  hide-sticky-menu">
+            <div class="container-fluid">
+                <div class="c-sub-nav_wrap">
+                <i class="mobile-icon icon ion-md-more"></i></ul>
+            </div>
+            <div class="c-modal_item">
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+            </div>
+        </div>
+
     </header>
+
 <div class="container">
     <div class= "gpt2-theme">
-        <div class="gpt2-theme-title">
+        <div class="gpt2-theme-title center">
             <h1>Gpt2 em Português</h1>
         </div>
-        <div class = "gpt2-model">
-            <div class= "model-title">pierreguillou/gpt2-small-portuguese</div>
-            <div class="model-description">
-                <h1>Description:</h1>
-                <p>Description Content: alooooo</p>
-            </div>
-            
+    </div>
+    <div class = "gpt2-model">
+        <div class= "model-title center model-columm">pierreguillou/gpt2-small-portuguese</div>
+        <div class="model-description center model-columm">
+            <p>GPorTuguese-2 (Portuguese GPT-2 small) is a state-of-the-art language model for Portuguese based on the GPT-2 small model.
+                It was trained on Portuguese Wikipedia using Transfer Learning and Fine-tuning techniques in just over a day, on one GPU NVIDIA V100 32GB and with a little more than 1GB of training data.
+                It is a proof-of-concept that it is possible to get a state-of-the-art language model in any language with low ressources.</p>
+        </div>
+        <div class = "block model-columm center" >
             <form class="gpt2-query">
                 <label class="block ">
-                    <span class=" block overflow-auto resize-y py-2 px-3 w-full min-h-[42px] max-h-[500px] border border-gray-200 rounded-lg shadow-inner outline-none focus:ring-1 focus:ring-inset focus:ring-indigo-200 focus:shadow-inner dark:bg-gray-925 svelte-1wfa7x9" role="textbox" contenteditable="" placeholder ="Your sentence here...">
-                        Alooooo
-                    </span>
-                </label> 
-                <button class="btn-widget w-24 h-10 px-5 " type="submit">Compute</button>
+                    <textarea class=" center overflow-auto resize-y py-2 px-3 min-w-\[450px\] min-h-[100px] max-h-[500px] border query-box rounded-lg outline-none" id="textboxGpt2Small" placeholder="Your Sentence Here."></textarea>
+                </label>
+                <br>
+                <button class="btn-widget h-10 px-5 " type="submit">Compute</button>
             </form>
         </div>
-
-        
+        <div class= "gpt2-response model-columm hide" id="ResultBox">
+            <h1>Result</h1>
+            <textarea class=" center overflow-auto query-box resize-y py-2 px-3 min-w-\[450px\] min-h-[100px] max-h-[500px] border rounded-lg outline-none" id="ResultTextBox" placeholder="Your Sentence Here."></textarea>
+        </div>
 
     </div>
+
+
+    <div class= "gpt2-theme">
+        <div class="gpt2-theme-title center">
+            <h1>Gpt2 em Inglês</h1>
+        </div>
+    </div>
+
+
 </div>
 
     <footer>
-        <span>&copy; <img src="{% static 'Gpt2Integration/img/Komi_san_Python.png' %}" width="30px;" height="30px" alt="Foto da Komi-San com Livro de Python"/> &nbsp; CLR | All rights Reserved</span>
+        <span>&copy; <img src="{% static 'Gpt2Integration/img/Komi_san_Python.png' %}" width="30px;" height="30px" alt="Foto da Komi-San com Livro de Python"/> &nbsp; CLR 2021 | All Rights Reserved (Not really)</span>
     </footer>
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{% static 'Gpt2Integration/js/main.js'%}"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
