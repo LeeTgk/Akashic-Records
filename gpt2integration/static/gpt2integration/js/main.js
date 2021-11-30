@@ -1,10 +1,9 @@
 $(document).ready(function()
 {
 
-
-    var textBox = document.getElementById("textboxGpt2Small");
-    var ResultTextBox = document.getElementById("ResultTextBox");
-    $('#ComputeButton').click(function()
+    var basetextTextBox = document.getElementById("basetext");
+    var resultTextBox = document.getElementById("result");
+    $('#compute').click(function()
     {
         $.ajax(
         {
@@ -13,17 +12,16 @@ $(document).ready(function()
             cache: false,
             data: 
             {
-                textbox_text: textBox.value,
+                textbox_text: basetextTextBox.value,
                 model: "SmallPortuguese",
             },
             beforeSend: function() 
             {
-                $(this).text('Loading...');
+                resultTextBox.value = 'Carregando'
             },
             success: function(response)
             {
-                $('#ResultBox').removeClass("hide")
-                ResultTextBox.value = response.generated_text
+                resultTextBox.value = response.generated_text
             }
 
 

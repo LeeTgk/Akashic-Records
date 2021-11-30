@@ -9,6 +9,10 @@ main {
     padding: 30 0;
 }
 
+.row {
+    margin-bottom: 5px;
+}
+
 .footer {
     background-color: #eee;
     padding: 30;

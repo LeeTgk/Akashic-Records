@@ -1,83 +1,61 @@
+{% extends "base.html" %}
+
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akashic-Records</title>
-    <script src="https://kit.fontawesome.com/781dbdae3e.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'Gpt2Integration/css/style.css' %}">
 
-</head>
-<body>
-    <header>
-        <div class = "branding">
-            <br>
-            <img src="{% static 'Gpt2Integration/img/SistineAnime.png' %}" width="300px;" alt="Foto da Sistine do Anime Akashic Records"/><br>
-            Akashic-Records<br> 
-        </div>
+{% block title %}Página Inícial{% endblock %}
 
-        <div class=" c-sub-header-nav with-border  hide-sticky-menu">
-            <div class="container-fluid">
-                <div class="c-sub-nav_wrap">
-                <i class="mobile-icon icon ion-md-more"></i></ul>
-            </div>
-            <div class="c-modal_item">
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
-            </div>
-        </div>
+{% block main %}
+<h2>Akashic Records</h2>
 
-    </header>
-
-<div class="container">
-    <div class= "gpt2-theme">
-        <div class="gpt2-theme-title center">
-            <h1>Gpt2 em Português</h1>
-        </div>
+<div class="row justify-content-center">
+    <div class="col">
+        <img src="{% static 'Gpt2Integration/img/SistineAnime.png' %}" width="300px;" alt="Foto da Sistine do Anime Akashic Records"/>
     </div>
-    <div class = "gpt2-model">
-        <div class= "model-title center model-columm">pierreguillou/gpt2-small-portuguese</div>
-        <div class="model-description center model-columm">
-            <p>GPorTuguese-2 (Portuguese GPT-2 small) is a state-of-the-art language model for Portuguese based on the GPT-2 small model.
-                It was trained on Portuguese Wikipedia using Transfer Learning and Fine-tuning techniques in just over a day, on one GPU NVIDIA V100 32GB and with a little more than 1GB of training data.
-                It is a proof-of-concept that it is possible to get a state-of-the-art language model in any language with low ressources.</p>
-        </div>
-        <div class = "block model-columm center" >
-            <div class="gpt2-query">
-                <label class="block ">
-                    <textarea class=" center overflow-auto resize-y py-2 px-3 min-w-\[450px\] min-h-[100px] max-h-[500px] border query-box rounded-lg outline-none" id="textboxGpt2Small" placeholder="Your Sentence Here."></textarea>
-                </label>
-                <br>
-                <button class="btn-widget h-10 px-5 " type="submit" id = "ComputeButton">Compute</button>
-            </div>
-        </div>
-        <div class= "gpt2-response model-columm hide" id="ResultBox">
-            <h1>Result</h1>
-            <textarea class=" center overflow-auto query-box resize-y py-2 px-3 min-w-\[450px\] min-h-[100px] max-h-[500px] border rounded-lg outline-none" id="ResultTextBox" placeholder="Your Sentence Here."></textarea>
-        </div>
-
-    </div>
-
-
-    <div class= "gpt2-theme">
-        <div class="gpt2-theme-title center">
-            <h1>Gpt2 em Inglês</h1>
-        </div>
-    </div>
-
-
 </div>
 
-    <footer>
-        <span>&copy; <img src="{% static 'Gpt2Integration/img/Komi_san_Python.png' %}" width="30px;" height="30px" alt="Foto da Komi-San com Livro de Python"/> &nbsp; CLR 2021 | All Rights Reserved (Not really)</span>
-    </footer>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="{% static 'Gpt2Integration/js/main.js'%}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
+
+{% include 'messages.html' %}
+
+<div class="card border-dark mb-3">
+    <div class="card-header">pierreguillou/gpt2-small-portuguese</div>
+    <div class="card-body">
+      <h4 class="card-title">O que é o GPT-2 Small Portuguese? (em inglês)</h4>
+      <p class="card-text">GPorTuguese-2 (Portuguese GPT-2 small) is a state-of-the-art language model for Portuguese based on the GPT-2 small model.
+        It was trained on Portuguese Wikipedia using Transfer Learning and Fine-tuning techniques in just over a day, on one GPU NVIDIA V100 32GB and with a little more than 1GB of training data.
+        It is a proof-of-concept that it is possible to get a state-of-the-art language model in any language with low ressources.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="form-group">
+            <label for="basetext" class="form-label mt-4">Digite o texto gerador</label>
+            <textarea class="form-control" id="basetext" rows="3"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <label for="result" class="form-label mt-4">Resultado</label>
+            <textarea class="form-control" id="result" rows="3" readonly></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-end">
+    {% if user.is_authenticated %}
+    <div class="col-1">
+        <button type="button" class="btn btn-outline-success" id="save">Salvar</button>
+    </div>
+    {% endif %}
+    <div class="col-1">
+        <button type="submit" class="btn btn-outline-light" id="compute">Computar</button>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extrajs %}
+
+<script src="{% static 'Gpt2Integration/js/main.js'%}"></script>
+
+{% endblock %}
