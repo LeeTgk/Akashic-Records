@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('gpt2integration.urls')),
-    path('accounts/', include('userprofile.urls'))
+    path('accounts/', include('userprofile.urls')),
+    path('posts/',include('posts.urls'))
 ]

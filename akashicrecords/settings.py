@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'userprofile.apps.UserProfileConfig',
-    'gpt2integration.apps.Gpt2IntegrationConfig'
+    'gpt2integration.apps.Gpt2IntegrationConfig',
+    'posts.apps.PostsConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View
 from django.http import JsonResponse
+from posts import views as pview
 import requests
 import json
 import os
@@ -23,7 +24,8 @@ class AjaxHandlerView(View):
         return render(request, 'Gpt2Integration/home.html')
     
     def post(self,request):
-        return
+        pview.post(request)
+        return JsonResponse({'data': "Ok"}, status=200) #Is that even needed ?
 
 def home(request):
     return render(request, 'Gpt2Integration/home.html')
