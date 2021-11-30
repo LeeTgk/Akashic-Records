@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'userprofile.apps.UserProfileConfig',
     'gpt2integration.apps.Gpt2IntegrationConfig',
-    'posts.apps.PostsConfig'
+    'posts.apps.PostsConfig',
+    'fontawesome-free'
 ]
 
 MIDDLEWARE = [

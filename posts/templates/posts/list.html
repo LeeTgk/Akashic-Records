@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Lista de Textos Gerados{% endblock %}
+
+{% block main %}
+<h2>Lista de Textos Gerados</h2>
+
+<hr>
+
+{% include 'messages.html' %}
+
+{% if posts %}
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Título</th>
+        <th scope="col">Criador</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+        <tr>
+            <th scope="row">{{ post.post_id }}</th>
+            <td>{{ post.title }}</td>
+            <td>{{ post.created_by.username }}</td>
+            <td>
+                <a href="{% url 'view_post' post.post_id %}" title="Editar texto gerado.">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+      
+    </tbody>
+  </table>
+
+{% else %}
+
+<div class="row">
+    <p>Nenhum post gerado!</p>
+</div>
+
+{% endif %}
+
+{% endblock %}
