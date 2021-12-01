@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import View
 from django.http import JsonResponse
 from posts import views as pview
+import time
 import requests
 import json
 import os
@@ -16,6 +17,8 @@ class AjaxHandlerView(View):
     def get(self,request):
         text = request.GET.get('textbox_text')
         model = request.GET.get('model')
+        queryRes = query(text,model)
+        time.sleep(0.1)
         queryRes = query(text,model)
         if request.is_ajax():
             if queryRes:

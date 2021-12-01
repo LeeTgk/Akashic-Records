@@ -23,6 +23,23 @@ $(document).ready(function()
             success: function(response)
             {
                 resultTextBox.value = response.generated_text
+            },
+            error: function(xhr, textStatus, errorThrown )
+             {
+                if (textStatus == 'timeout') {
+                    this.tryCount++;
+                    if (this.tryCount <= this.retryLimit) {
+                        //try again
+                        $.ajax(this);
+                        return;
+                    }            
+                    return;
+                }
+                if (xhr.status == 500) {
+                    //handle error
+                } else {
+                    //handle error
+                }
             }
 
 
@@ -49,7 +66,7 @@ $(document).ready(function()
             $.ajax(
             {
                 url: '',
-                type: 'post',
+                type: 'POST',
                 cache: false,
                 data: 
                 {
