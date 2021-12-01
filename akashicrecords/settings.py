@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'userprofile.apps.UserProfileConfig',
     'gpt2integration.apps.Gpt2IntegrationConfig',
     'posts.apps.PostsConfig',
-    'fontawesome-free'
 ]
 
 MIDDLEWARE = [

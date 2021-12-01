@@ -19,6 +19,7 @@ class AjaxHandlerView(View):
         queryRes = query(text,model)
         if request.is_ajax():
             if queryRes:
+                print(queryRes)
                 return JsonResponse(queryRes[0], status=200)
             
         return render(request, 'Gpt2Integration/home.html')

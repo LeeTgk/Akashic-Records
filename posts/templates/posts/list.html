@@ -13,7 +13,7 @@
 <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Data</th>
         <th scope="col">Título</th>
         <th scope="col">Criador</th>
         <th scope="col"></th>
@@ -22,14 +22,20 @@
     <tbody>
         {% for post in posts %}
         <tr>
-            <th scope="row">{{ post.post_id }}</th>
+            <th scope="row" style="width: 25%">{{ post.created_at }}</th>
             <td>{{ post.title }}</td>
             <td>{{ post.created_by.username }}</td>
+            <td style = "width:50%">{{post.generated_text}}</td>
             <td>
-                <a href="{% url 'view_post' post.post_id %}" title="Editar texto gerado.">
+                <a href="{% url 'edit_post' post.post_id %}" title="Editar texto gerado.">
                     <i class="fas fa-edit"></i>
                 </a>
             </td>
+            <td>
+              <a href="{% url 'delete_post' post.post_id %}" title="Deletar texto gerado.">
+                  <i class="fas fa-trash-alt red" style= "color: darkred"></i>
+              </a>
+          </td>
         </tr>
         {% endfor %}
       

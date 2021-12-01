@@ -12,12 +12,11 @@ def list_posts(request):
         posts = Post.objects.filter()
     else:
         posts = Post.objects.filter(created_by=request.user)
-    
 
     context = {
         'posts': posts
     }
-
+    
     return render(request, 'posts/list.html', context=context)
 
 @login_required
