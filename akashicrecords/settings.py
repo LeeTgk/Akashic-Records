@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 if ENVIROMENT != 'production':
     DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','akashicrecords.herokuapp.com']
 
 
 # Application definition
