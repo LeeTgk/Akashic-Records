@@ -25,14 +25,14 @@ class AjaxHandlerView(View):
                 print(queryRes)
                 return JsonResponse(queryRes[0], status=200)
             
-        return render(request, 'gpt2Integration/home.html')
+        return render(request, 'gpt2integration/home.html')
     
     def post(self,request):
         pview.post(request)
         return JsonResponse({'data': "Ok"}, status=200) #Is that even needed ?
 
 def home(request):
-    return render(request, 'gpt2Integration/home.html')
+    return render(request, 'gpt2integration/home.html')
 
 def query(payload,model):
     if model:
