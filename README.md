@@ -49,7 +49,7 @@ No site as operações possíveis são:
   * ou editar o título:
   ![image](https://user-images.githubusercontent.com/61758137/144293297-5df944d0-d1fe-4fda-ac20-a883f1eb281b.png)
 
-Observações sobre o Uso:
+* Observações sobre o Uso:
 A ideia do Serviço é ser um passatempo curioso, a fim de ver resultados interessantes e, ou engraçados.
 Dito isso, condenamos o uso do mesmo na geração de textos que podem ser interpretados como verdade.
 Como o próprio autor do modelo cita :
