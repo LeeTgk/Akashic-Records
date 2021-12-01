@@ -42,6 +42,7 @@ No site as operações possíveis são:
   * Gerar um texto resultado da api gpt2:
   ![image](https://user-images.githubusercontent.com/61758137/144291234-8bb2d09b-8de0-44b3-acc7-a63d6412d29d.png)
   * salva-lo caso esteja logado:
+
   ![image](https://user-images.githubusercontent.com/61758137/144292573-bb78da5f-3457-41eb-b371-8aea1924571a.png)
   * visualizar os resultados salvos, excluir:
   ![image](https://user-images.githubusercontent.com/61758137/144293016-ace93fe6-7c19-4e4a-b492-94680147ec0d.png)
